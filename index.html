@@ -1,0 +1,18 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Rolling Rush 3D</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0e1224">
+<link rel="icon" href="icons/icon.svg"><link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rolling Rush"><link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div id="hud" hidden><div class="pill" id="hl">Level 1</div><div class="pill" id="hc">🪙 0</div><div class="pill" id="hv">❤❤❤</div>
+<button class="pill" data-a="pause">❚❚</button><div id="bar"><i id="bi"></i></div></div>
+<div id="ui"></div><div id="toast"></div>
+<script>
+(function(){var q=['lib/three.min.js','https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'],i=0;
+function n(){var s=document.createElement('script');s.src=q[i];
+s.onload=function(){var g=document.createElement('script');g.src='game.js';document.body.appendChild(g)};
+s.onerror=function(){if(++i<q.length)n();else document.getElementById('ui').innerHTML='<div class="card"><h2>Three.js not found</h2><p>Go online once, or put three.min.js (r128) in /lib.</p></div>'};
+document.body.appendChild(s)}n()})();
+if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js')});
+</script></body></html>
